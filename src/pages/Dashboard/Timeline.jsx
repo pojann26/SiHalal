@@ -1,11 +1,14 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 
-export function TimelineItem({ number, title, subtitle, status, action, onClick }) {
+export function TimelineItem({ number, title, subtitle, status, action, onClick, isLast }) {
   return (
-    <div className={`timeline-item ${status}`}>
-      <div className="timeline-node">
-        {status === 'done' ? <Check size={14} strokeWidth={3} /> : number}
+    <div className={`timeline-item ${status} ${isLast ? 'is-last' : ''}`}>
+      <div className="timeline-node-col">
+        <div className="timeline-node">
+          {status === 'done' ? <Check size={14} strokeWidth={3} /> : number}
+        </div>
+        {!isLast && <div className={`timeline-connector ${status}`} />}
       </div>
       <div className="timeline-copy">
         <strong>{title}</strong>
@@ -70,6 +73,7 @@ export function Timeline({ onNavigate }) {
           subtitle="Draf PDF otomatis siap unggah ke SIHALAL"
           status="locked"
           action="Terkunci"
+          isLast={true}
         />
       </div>
     </div>

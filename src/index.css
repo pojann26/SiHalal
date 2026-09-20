@@ -622,51 +622,92 @@ button:disabled {
 
 .timeline {
   display: grid;
+  position: relative;
 }
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 35px 1fr auto;
-  gap: 11px;
-  align-items: center;
-  padding: 14px 0;
-  border-bottom: 1px solid #edf1ee;
+  grid-template-columns: 32px 1fr auto;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 0;
+  position: relative;
 }
 
-.timeline-item:last-child {
-  border-bottom: 0;
+.timeline-node-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 44px;
 }
 
 .timeline-node {
-  width: 29px;
-  height: 29px;
+  width: 30px;
+  height: 30px;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 800;
   background: #edf2ef;
   color: #78837d;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 0 3px #ffffff;
+  transition: all 0.2s ease;
+}
+
+.timeline-connector {
+  position: absolute;
+  top: 30px;
+  bottom: -12px;
+  width: 2px;
+  background: #e2e8e5;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-connector.done {
+  background: #10b981;
+}
+
+.timeline-connector.current {
+  background: #cbd5e1;
+  border-left: 2px dashed #94a3b8;
+  width: 0;
 }
 
 .timeline-item.done .timeline-node {
-  background: var(--green-soft);
-  color: var(--green);
+  background: #e8f4ee;
+  color: #1f7a57;
+  border: 1.5px solid #a7f3d0;
 }
 
 .timeline-item.current .timeline-node {
-  background: var(--orange-soft);
-  color: var(--orange);
+  background: #fef3c7;
+  color: #b45309;
+  border: 1.5px solid #fde68a;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.18), 0 0 0 4px #ffffff;
+}
+
+.timeline-item.locked .timeline-node {
+  background: #f1f5f3;
+  color: #9ca3af;
+  border: 1px solid #e2e8e5;
 }
 
 .timeline-copy {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  padding-top: 3px;
 }
 
 .timeline-copy strong {
   font-size: 12px;
+  color: #18211c;
 }
 
 .timeline-copy span {
@@ -677,13 +718,18 @@ button:disabled {
 .timeline-action {
   border: 0;
   background: transparent;
-  font-size: 10px;
-  font-weight: 800;
+  font-size: 11px;
+  font-weight: 700;
   color: #707b74;
+  padding-top: 5px;
+  cursor: pointer;
 }
 
 .timeline-action.current {
-  color: var(--green);
+  color: #1f7a57;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .alert-list {
