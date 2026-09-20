@@ -26,10 +26,10 @@ export function Ingredients({ onNavigate }) {
             <p>Repositori bahan yang sudah dipindai dan divalidasi untuk usaha kamu.</p>
           </div>
           <button
-            className="primary-btn flex items-center gap-1.5"
+            className="primary-btn flex items-center gap-1.5 whitespace-nowrap"
             onClick={() => onNavigate('validation')}
           >
-            <Plus size={14} strokeWidth={3} /> Tambah / scan bahan
+            <Plus size={14} strokeWidth={3} /> Tambah
           </button>
         </div>
 

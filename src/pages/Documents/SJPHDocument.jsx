@@ -3,12 +3,12 @@ import { ShieldCheck, CheckSquare, Award } from 'lucide-react';
 
 export function SJPHDocument({ user }) {
   const businessName = user?.businessName || 'SpiegDit';
-  const ownerName = user?.name || 'Fauzan Akbar';
+  const ownerName = user?.name || 'Aditya Mahatir';
   const supervisor = user?.halalSupervisor || 'Ahmad Dahlan';
   const nib = user?.nib || '1234567890123';
   const address = user?.kitchenAddress || 'Jl. Tembalang Raya No. 45, Semarang, Jawa Tengah';
   const phone = user?.phone || '0812-3456-7890';
-  const email = user?.email || 'fauzan@culinary.id';
+  const email = user?.email || 'aditya@culinary.id';
 
   const materials = [
     { no: 1, name: 'Tempe Segar (Kedelai Non-GMO)', brand: 'Tempe Mandiri', certOrg: 'LPPOM MUI', certNo: 'ID3311000012345', exp: '2028-06-15', p1: true, p2: false, p3: false },
