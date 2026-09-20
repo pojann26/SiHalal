@@ -16,7 +16,7 @@ export function Topbar({ title, onNotify, onOpenHelp, user, onOpenProfile }) {
         </div>
         <div>
           <div className="eyebrow flex items-center gap-1.5">
-            <span>{user?.businessName || 'SIHALAL'}</span>
+            <span>{user?.businessName || 'SpiegDit'}</span>
             <span className="mobile-only-pill">UMKM</span>
           </div>
           <h1>{title}</h1>

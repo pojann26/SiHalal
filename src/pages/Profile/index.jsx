@@ -6,7 +6,7 @@ export function Profile({ user, onUpdateUser, onLogout, onNotify }) {
     name: user?.name || 'Fauzan Akbar',
     email: user?.email || 'fauzan@culinary.id',
     phone: user?.phone || '081234567890',
-    businessName: user?.businessName || 'Fauzan Culinary',
+    businessName: user?.businessName || 'SpiegDit',
     nib: user?.nib || '1234567890123',
     kitchenAddress: user?.kitchenAddress || 'Jl. Tembalang Raya No. 45, Semarang',
     halalSupervisor: user?.halalSupervisor || 'Ahmad Dahlan',

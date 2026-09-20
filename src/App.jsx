@@ -24,7 +24,7 @@ export function App() {
     name: 'Fauzan Akbar',
     email: 'fauzan@culinary.id',
     phone: '081234567890',
-    businessName: 'Fauzan Culinary',
+    businessName: 'SpiegDit',
     nib: '1234567890123',
     kitchenAddress: 'Jl. Tembalang Raya No. 45, Semarang',
     halalSupervisor: 'Ahmad Dahlan',

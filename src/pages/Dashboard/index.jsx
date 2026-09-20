@@ -7,16 +7,16 @@ import { Timeline } from './Timeline';
 import { AlertSection } from './AlertSection';
 import { RecentActivity } from './RecentActivity';
 
-export function Dashboard({ onNavigate, onNotify }) {
+export function Dashboard({ onNavigate, onNotify, user }) {
   return (
     <div className="page">
       {/* Hero Welcome Card */}
       <section className="hero-card">
         <div className="hero-copy">
-          <Pill variant="neutral">Pra-audit sertifikasi halal</Pill>
-          <h2>Selamat datang, Fauzan.</h2>
+          <Pill variant="neutral">{user?.businessName || 'SpiegDit'} · Pra-audit sertifikasi halal</Pill>
+          <h2>Selamat datang, {user?.name ? user.name.split(' ')[0] : 'Fauzan'}.</h2>
           <p>
-            Siapkan data usaha, validasi bahan baku, dan hasilkan draf SJPH sebelum proses pengajuan resmi.
+            Siapkan data usaha <strong>{user?.businessName || 'SpiegDit'}</strong>, validasi bahan baku, dan hasilkan draf SJPH sebelum proses pengajuan resmi.
           </p>
           <div className="hero-actions">
             <button

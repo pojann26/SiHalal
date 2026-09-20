@@ -3160,4 +3160,67 @@ button:disabled {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* ====================================================
+   OFFICIAL SJPH DOCUMENT (A4 & PRINT STYLES)
+   ==================================================== */
+.a4-page {
+  width: 794px !important;
+  min-height: 1123px !important;
+  box-sizing: border-box !important;
+  font-family: 'Times New Roman', Times, serif, system-ui;
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  flex-shrink: 0 !important;
+}
 
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeInModal 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #sjph-full-document, #sjph-full-document * {
+    visibility: visible;
+  }
+  #sjph-full-document {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .a4-page {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    margin: 0 !important;
+    padding: 18mm !important;
+    border: none !important;
+    box-shadow: none !important;
+    page-break-after: always;
+    break-after: page;
+  }
+  .topbar,
+  .sidebar,
+  .mobile-bottom-nav,
+  .floating-ai-fab,
+  .toast-container,
+  button {
+    display: none !important;
+  }
+}

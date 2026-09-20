@@ -22,12 +22,12 @@ export function LoginView({ onLogin, onRegister }) {
       name: 'Fauzan Akbar',
       email: 'fauzan@culinary.id',
       phone: '081234567890',
-      businessName: 'Fauzan Culinary',
+      businessName: 'SpiegDit',
       nib: '1234567890123',
       kitchenAddress: 'Jl. Tembalang Raya No. 45, Semarang',
       halalSupervisor: 'Ahmad Dahlan',
       productCategory: 'Olahan Makanan Ringan & Bumbu (KBLI 10799)',
-      avatarText: 'FA',
+      avatarText: 'SP',
     });
   };
 
@@ -37,12 +37,12 @@ export function LoginView({ onLogin, onRegister }) {
       name: identifier.includes('@') ? identifier.split('@')[0] : 'Pengusaha Kuliner',
       email: identifier.includes('@') ? identifier : 'umkm@halal.id',
       phone: '081234567890',
-      businessName: 'Usaha Kuliner Saya',
+      businessName: 'SpiegDit',
       nib: identifier.length === 13 ? identifier : '1234567890123',
-      kitchenAddress: 'Fasilitas Dapur Utama',
-      halalSupervisor: 'Penyelia Halal Internal',
+      kitchenAddress: 'Fasilitas Dapur Utama, Semarang',
+      halalSupervisor: 'Ahmad Dahlan',
       productCategory: 'Makanan & Minuman Olahan',
-      avatarText: 'UK',
+      avatarText: 'SP',
     });
   };
 
@@ -53,12 +53,12 @@ export function LoginView({ onLogin, onRegister }) {
         name: regData.name || 'Pengusaha Baru',
         email: 'pengusaha@halal.id',
         phone: regData.phone || '081234567890',
-        businessName: regData.businessName || 'Dapur Berkah UMKM',
+        businessName: regData.businessName || 'SpiegDit',
         nib: regData.nib || '1234567890123',
         kitchenAddress: regData.kitchenAddress || 'Alamat Fasilitas Produksi',
         halalSupervisor: regData.name || 'Penyelia Halal',
         productCategory: regData.productCategory,
-        avatarText: (regData.name ? regData.name.slice(0, 2) : 'UM').toUpperCase(),
+        avatarText: (regData.businessName ? regData.businessName.slice(0, 2) : 'SP').toUpperCase(),
       });
     }
   };
@@ -82,14 +82,14 @@ export function LoginView({ onLogin, onRegister }) {
             <strong className="text-xs text-emerald-900">Akses Cepat Pengujian</strong>
           </div>
           <p className="text-xs text-emerald-800 mb-2">
-            Masuk langsung sebagai <strong>Fauzan Culinary (UMKM Kuliner)</strong> untuk mencoba seluruh alur:
+            Masuk langsung sebagai <strong>SpiegDit (UMKM Kuliner)</strong> untuk mencoba seluruh alur:
           </p>
           <button
             type="button"
             className="demo-login-btn"
             onClick={handleDemoLogin}
           >
-            <span>Masuk Cepat Demo (Fauzan Culinary)</span>
+            <span>Masuk Cepat Demo (SpiegDit)</span>
             <ArrowRight size={13} />
           </button>
         </div>

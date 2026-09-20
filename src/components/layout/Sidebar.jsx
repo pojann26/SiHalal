@@ -93,7 +93,7 @@ export function Sidebar({ active, onNavigate, user }) {
         <div className="avatar">{user?.avatarText || 'FA'}</div>
         <div className="profile-copy">
           <strong>{user?.name || 'Fauzan Akbar'}</strong>
-          <span>{user?.businessName || 'UMKM Kuliner'}</span>
+          <span>{user?.businessName || 'SpiegDit'}</span>
         </div>
         <span className="profile-menu">
           <MoreHorizontal size={16} />
