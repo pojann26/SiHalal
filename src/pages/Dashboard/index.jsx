@@ -55,7 +55,7 @@ export function Dashboard({ onNavigate, onNotify, user }) {
         <MetricCard
           icon={<Boxes size={18} strokeWidth={2.2} />}
           label="Bahan tervalidasi"
-          value="18"
+          value="8 / 10"
           caption="2 perlu perhatian"
           tone="blue"
         />
@@ -70,7 +70,7 @@ export function Dashboard({ onNavigate, onNotify, user }) {
           icon={<AlertTriangle size={18} strokeWidth={2.2} />}
           label="Perlu perhatian"
           value="2"
-          caption="Bahan baku"
+          caption="1 review · 1 berisiko"
           tone="orange"
         />
       </div>

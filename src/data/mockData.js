@@ -1,8 +1,14 @@
 export const ingredientsData = [
-  { name: 'Tepung Terigu', category: 'Bahan utama', status: 'verified', source: 'Database bahan halal', date: '20 Sep 2026', bpjphId: 'ID00110000012340121' },
-  { name: 'Gula Pasir', category: 'Pemanis', status: 'verified', source: 'Database bahan halal', date: '20 Sep 2026', bpjphId: 'ID00110000045670221' },
-  { name: 'Saus Tiram ABC', category: 'Bumbu', status: 'review', source: 'Hasil OCR + NLP', date: '20 Sep 2026', bpjphId: '-' },
-  { name: 'Sodium Benzoate', category: 'Bahan tambahan', status: 'risk', source: 'Hasil OCR + NLP', date: '19 Sep 2026', bpjphId: '-' },
+  { name: 'Tempe Segar (Kedelai)', category: 'Bahan utama', status: 'verified', source: 'Database bahan halal', date: '20 Sep 2026', bpjphId: 'ID3311000012345' },
+  { name: 'Minyak Goreng Sawit', category: 'Bahan utama', status: 'verified', source: 'Database bahan halal', date: '20 Sep 2026', bpjphId: 'ID0041000005678' },
+  { name: 'Tepung Terigu', category: 'Bahan utama', status: 'verified', source: 'Database bahan halal', date: '20 Sep 2026', bpjphId: 'ID0011000001234' },
+  { name: 'Tepung Tapioka', category: 'Bahan tambahan', status: 'verified', source: 'Database bahan halal', date: '20 Sep 2026', bpjphId: 'ID0021000007890' },
+  { name: 'Gula Pasir', category: 'Pemanis', status: 'verified', source: 'Database bahan halal', date: '20 Sep 2026', bpjphId: 'ID0011000004567' },
+  { name: 'Garam Beriodium', category: 'Bumbu', status: 'verified', source: 'Database bahan halal', date: '20 Sep 2026', bpjphId: 'ID0011000009876' },
+  { name: 'Bawang Putih Bubuk', category: 'Bumbu', status: 'verified', source: 'Database bahan halal', date: '20 Sep 2026', bpjphId: 'ID0021000003412' },
+  { name: 'Ketumbar Bubuk', category: 'Bumbu', status: 'verified', source: 'Database bahan halal', date: '20 Sep 2026', bpjphId: 'ID0031000006543' },
+  { name: 'Saus Tiram ABC', category: 'Bumbu', status: 'review', source: 'Hasil OCR + NLP', date: '20 Sep 2026', bpjphId: 'Perlu Verifikasi' },
+  { name: 'Sodium Benzoate', category: 'Bahan tambahan', status: 'risk', source: 'Hasil OCR + NLP', date: '19 Sep 2026', bpjphId: 'Tidak Ditemukan' },
 ];
 
 export const statusMeta = {
@@ -13,12 +19,36 @@ export const statusMeta = {
 
 export const validationItems = [
   {
+    name: 'Tempe Segar (Kedelai)',
+    ref: 'Kedelai fermentasi nabati',
+    status: 'verified',
+    confidence: 99,
+    criticalPoints: 'Bahan alami nabati (non-GMO). Ragi tempe menggunakan biakan murni halal.',
+    bpjphId: 'ID3311000012345'
+  },
+  {
+    name: 'Minyak Goreng Sawit',
+    ref: 'Minyak kelapa sawit RBD',
+    status: 'verified',
+    confidence: 99,
+    criticalPoints: 'Berasal dari minyak nabati murni. Proses pemurnian bebas karbon aktif hewani non-halal.',
+    bpjphId: 'ID0041000005678'
+  },
+  {
     name: 'Tepung Terigu',
     ref: 'Tepung gandum',
     status: 'verified',
     confidence: 98,
     criticalPoints: 'Titik kritis rendah (berasal dari nabati/gandum). Fortifikasi vitamin telah terdaftar.',
-    bpjphId: 'ID00110000012340121'
+    bpjphId: 'ID0011000001234'
+  },
+  {
+    name: 'Tepung Tapioka',
+    ref: 'Pati singkong murni',
+    status: 'verified',
+    confidence: 99,
+    criticalPoints: 'Bahan nabati murni dari umbi singkong tanpa penambahan bahan hewani.',
+    bpjphId: 'ID0021000007890'
   },
   {
     name: 'Gula Pasir',
@@ -26,7 +56,31 @@ export const validationItems = [
     status: 'verified',
     confidence: 99,
     criticalPoints: 'Proses pemutihan tidak menggunakan arang aktif tulang hewani non-halal.',
-    bpjphId: 'ID00110000045670221'
+    bpjphId: 'ID0011000004567'
+  },
+  {
+    name: 'Garam Beriodium',
+    ref: 'Natrium klorida pangan',
+    status: 'verified',
+    confidence: 99,
+    criticalPoints: 'Bahan mineral murni dengan fortifikasi iodium terdaftar SNI & BPOM.',
+    bpjphId: 'ID0011000009876'
+  },
+  {
+    name: 'Bawang Putih Bubuk',
+    ref: 'Bawang putih dehidrasi',
+    status: 'verified',
+    confidence: 97,
+    criticalPoints: '100% bawang putih murni kering tanpa campuran perisa atau pewarna sintetis.',
+    bpjphId: 'ID0021000003412'
+  },
+  {
+    name: 'Ketumbar Bubuk',
+    ref: 'Biji ketumbar giling',
+    status: 'verified',
+    confidence: 98,
+    criticalPoints: 'Rempah nabati murni tanpa bahan tambahan pangan berisiko.',
+    bpjphId: 'ID0031000006543'
   },
   {
     name: 'Saus Tiram ABC',

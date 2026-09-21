@@ -8,7 +8,8 @@ export function Assessment({
   setStep,
   answers,
   setAnswers,
-  onNotify
+  onNotify,
+  onNavigate
 }) {
   const current = assessmentQuestions[step - 1];
   const answer = answers[step];
@@ -20,7 +21,10 @@ export function Assessment({
     if (step < assessmentQuestions.length) {
       setStep(step + 1);
     } else {
-      onNotify('Self-assessment berhasil disimpan.');
+      onNotify('Self-assessment berhasil disimpan. Melanjutkan ke pemindaian bahan baku...');
+      if (onNavigate) {
+        onNavigate('validation');
+      }
     }
   };
 

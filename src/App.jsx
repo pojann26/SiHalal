@@ -117,6 +117,7 @@ export function App() {
           answers={assessmentAnswers}
           setAnswers={setAssessmentAnswers}
           onNotify={notify}
+          onNavigate={go}
         />
       )}
       {active === 'ingredients' && <Ingredients onNavigate={go} />}

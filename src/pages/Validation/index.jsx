@@ -61,7 +61,7 @@ export function Validation({ onNavigate, onNotify, initialMode = 'scanner' }) {
               </p>
             </div>
             <div className="validation-score">
-              <strong>18/20</strong>
+              <strong>8/10</strong>
               <span>bahan siap</span>
             </div>
           </section>
@@ -71,8 +71,8 @@ export function Validation({ onNavigate, onNotify, initialMode = 'scanner' }) {
             <MetricCard
               icon={<Check size={18} strokeWidth={2.5} />}
               label="Terverifikasi"
-              value="18"
-              caption="90% dari bahan"
+              value="8"
+              caption="80% dari bahan"
               tone="green"
             />
             <MetricCard
